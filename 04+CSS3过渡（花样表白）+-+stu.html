@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>04 CSS3过渡（花样告白）</title>   
+</head>
+<style type="text/css">
+    body{
+        background-color:#4993eb;
+    }
+    .heart{
+                width: 200px;
+                height: 200px;
+                background-color:#4993eb;
+                margin: 50px auto;
+                position: relative;
+                vertical-align: middle;
+            }
+            .heart::before{
+                position: absolute;
+                display: block;
+                content:"";
+               /* line-height: 20px;*/
+                color:#ffff24;
+                font-size: 25px;
+                width: 150px;
+                height: 250px;
+                background-color:#ff0582;
+                border-top-left-radius: 50% 75px;
+                border-top-right-radius: 50% 75px;
+                left: -297px;
+                top: -16px;
+                transform: rotate(-45deg);
+                display: inline-block;
+            }
+            .heart::after{
+                 position: absolute;
+                display: block;
+                content:"";
+                color:#ffff24;
+                 font-size: 25px;
+                width: 150px;
+                height: 250px;
+                background-color:#ff0582;
+                border-top-left-radius: 50% 75px;
+                border-top-right-radius: 50% 75px;
+                left: -225px;
+                top: -16px;
+                transform: rotate(45deg);
+            } 
+             .font-1{
+            position: absolute;
+            top: 20px;
+            left: -314px;
+            right: 400px;
+            z-index: 999;
+            color:#ffff24;
+            font-size: 20px;
+            transform: rotate(-27deg);
+        }
+        .font-2{
+            position: absolute;
+            top: 20px;
+            left: -97px;
+            right: 400px;
+            z-index: 999;
+            color:#ffff24;
+            font-size: 20px;
+            transform: rotate(-27deg);
+
+        }
+
+            .box {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: -130px 683px;
+            perspective: 100px;
+            transform-style: preserve-3d;
+            /*transition: all 1s linear;*/
+        }
+        .box1,
+        .box2{
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            margin: -156px auto;
+            text-align: center;
+            line-height: 200px;
+            font-size: 32px;
+            overflow: hidden;
+        }
+        .box2 {
+            transform: rotateY(-180deg);
+        }
+        .box:hover {
+            transform: rotatey(180deg);
+        }
+
+        .items{
+            width: 100%;
+            height: 260px;
+            background-color: #4993eb;
+            position: fixed;
+            left: 0;
+            top: 54%;
+        }
+        .item{
+            position: relative;
+            top: 0%;
+            left: 7%;
+            float: left;
+            margin: 0px 10px;
+            text-align: center;
+            background-color: #fff;
+        }
+        .item:hover{
+            width: 200px;
+            height: 260px;
+            position: relative;
+            top: 0px;
+            left: 7%;
+            float: left;
+            margin: 0px 10px;
+            background-color: #fff;
+            transform: translate(0,-10px);
+            box-shadow: 0px 16px 16px 7px #888888;
+        }
+        .pic{
+            position: relative;
+            top: 3%;
+            left: 0%;
+        }
+        .desc{
+            width: 200px;
+            height: 100px;
+            position: relative;
+            top: 0%;
+            left: 0%;
+            color: #fff;
+        }
+        .desc:hover{
+            width: 200px;
+            height: 60px;
+            color:#fff;
+            background-color: #ff5801;
+            position: relative;
+            top: 10%;
+            left: 0%;
+            padding-top: 20px;
+        }
+</style>
+
+<body>
+    <div class="top">
+         <div class="heart">
+            <div class="font-1">华晨宇</div>
+             <div class="font-2">喜欢你</div>
+         </div>
+    <div class="box">
+        <div class="box1"><img src="./images/pre.png" alt=""></div>
+        <div class="box2"><img src="./images/aft.png" alt=""></div>
+    </div>
+    </div>
+   
+    <div class="items">
+        <div class="item">
+            <div class="pic1">
+            <img src="./images/1.jpg" alt="" width="200px" height="250px">
+        </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="./images/2.png" alt="" >
+            </div>
+            <div class="desc"><div>有句话悄悄说</div></div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="./images/3.png" alt="" >
+            </div>
+            <div class="desc">你的样子最可爱</div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="./images/4.png" alt="">
+            </div>
+            <div class="desc">喜欢的就是你</div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="./images/5.png" alt="" >
+            </div>
+            <div class="desc">期限是一万年</div>
+        </div>
+    </div>
+</body>
+
+</html>
