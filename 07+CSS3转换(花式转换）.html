@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>07+CSS3转换(花式转换）</title>   
+</head>
+<style>
+        body{
+            background-color: #eeeeee;
+        }
+        .box{
+
+            width:260px;
+            height:400px;
+            margin: 100px auto;
+            position: relative;
+        }
+        img{
+            width:100%;
+            height: 100%;
+            transition:all 1s;
+            position: absolute;
+            left: 0;
+            top: 0;
+            /*变换中心原点*/
+            transform-origin: center bottom;
+            box-shadow: 0 0 3px 0 #666666;
+        }
+        .box:hover img:nth-child(6){
+            transform: rotate(-10deg);
+        }
+        .box:hover img:nth-child(5){
+            transform: rotate(-20deg);
+        }
+        .box:hover img:nth-child(4){
+            transform: rotate(-30deg);
+        }
+        .box:hover img:nth-child(3){
+            transform: rotate(-40deg);
+        }
+        .box:hover img:nth-child(2){
+            transform: rotate(-50deg);
+        }
+        .box:hover img:nth-child(1) {
+            transform: rotate(-60deg);
+        }
+
+        .box:hover img:nth-child(8){
+            transform: rotate(10deg);
+        }
+        .box:hover img:nth-child(9){
+            transform: rotate(20deg);
+        }
+        .box:hover img:nth-child(10){
+            transform: rotate(30deg);
+        }
+        .box:hover img:nth-child(11){
+            transform: rotate(40deg);
+        }
+        .box:hover img:nth-child(12){
+            transform: rotate(50deg);
+        }
+        .box:hover img:nth-child(13){
+            transform: rotate(60deg);
+        }
+        .box:hover img:nth-child(14){
+            transform: rotate(70deg);
+        }
+        .box:hover img:nth-child(15){
+            transform: rotate(80deg);
+        }
+
+    </style>
+<body>
+<div class="box">
+    <img src="./images/1.jpg" alt="">
+    <img src="./images/2.jpg" alt="">
+    <img src="./images/3.jpg" alt="">
+    <img src="./images/4.jpg" alt="">
+    <img src="./images/5.jpg" alt="">
+    <img src="./images/6.jpg" alt="">
+    <img src="./images/7.jpg" alt="">
+    <img src="./images/8.jpg" alt="">
+    <img src="./images/9.jpg" alt="">
+    <img src="./images/10.jpg" alt="">
+    <img src="./images/11.jpg" alt="">
+    <img src="./images/12.jpg" alt="">
+    <img src="./images/13.jpg" alt="">
+    <img src="./images/j.jpg" alt="">
+    <img src="./images/j2.jpg" alt="">
+ </div>
+</body>
+</html>
