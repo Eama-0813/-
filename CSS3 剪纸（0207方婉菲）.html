@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 （剪纸）</title>
+<style type="text/css">
+body{
+      background:#f7f7f7;
+}
+.con span{
+      position: relative;
+      top: 200px;
+      left: 600px;
+      font-size: 80px;
+      color: #000;
+      transition: all 1s;
+      z-index: 10;
+    }
+    .con span::before,.con ::after{
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .con span::before{
+      color: #fff;
+      transform-origin: left;
+      text-shadow: #000 2px 0.5px 0;
+      display: inline-block;
+      transition: all 1s;
+    }
+    .con:hover span::before{
+      transform: rotateZ(2deg) rotateY(34deg);
+    }
+    .con span::after{
+      color: #cfcfcf;
+      display: inline-block;
+      transform-origin: left;
+      z-index: -10;
+    }
+    .con:hover span::after{
+      transform-origin: left;
+      transform: skewY(22deg);
+      transition: all 0.5s linear;
+    }
+</style>
+<body>
+<div class="con">
+  <span data-text="前">前</span>
+  <span data-text="端">端</span>
+  <span data-text="攻">攻</span>
+  <span data-text="略">略</span>
+</div>
+</body>
+</html>
