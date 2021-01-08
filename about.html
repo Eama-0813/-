@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>作品说明</title>
+	<style type="text/css">
+		body{
+			background-color:#efefef;
+		}
+		.con span{
+      position: relative;
+      top: -7px;
+      left: 500px;
+      font-size: 60px;
+      color: #000;
+      transition: all 1s;
+      z-index: 10;
+    }
+    .con span::before,.con ::after{
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .con span::before{
+      color: #3ccbe9;
+      font-family: "微软雅黑";
+      transform-origin: left;
+      text-shadow: #000 2px 0.5px 0;
+      display: inline-block;
+      transition: all 1s;
+    }
+    .con:hover span::before{
+      transform: rotateZ(2deg) rotateY(34deg);
+    }
+    .con span::after{
+      color: #cfcfcf;
+      display: inline-block;
+      transform-origin: left;
+      z-index: -10;
+    }
+    .con:hover span::after{
+      transform-origin: left;
+      transform: skewY(22deg);
+      transition: all 0.5s linear;
+    }
+    .position{
+    	width: 1000px;
+    height: 35px;
+    line-height: 35px;
+    color: #cf9563;
+    margin: 0 146px;
+    text-align: left;
+    font-size: 13px;
+    }
+    .position a{
+    	padding-right: 5px;
+    line-height: 35px;
+    font-size: 13px;
+    }
+		.about{
+			width: 1000px;
+			height: 351px;
+			position: absolute;
+			top: 120px;
+			left: 150px;
+			background-color: #fff;
+		}
+		.about span{
+			line-height: 2.5;
+            font-family: 宋体;
+            font-size: 12pt;
+            position:relative;
+            top: 20px;
+		}
+    .about span:hover{
+      color: #cf9563;
+
+    }
+	</style>
+</head>
+<body>
+	<div class="con">
+  <span data-text="作">作</span>
+  <span data-text="品">品</span>
+  <span data-text="说">说</span>
+  <span data-text="明">明</span>
+</div>
+	<div class="position">
+		<sapn>当前位置：</sapn>
+		<a href="index.html" target="_blank" title="首页">首页</a>
+		&nbsp;>&nbsp;
+		<a title="作品说明">作品说明</a>
+
+	</div>
+<div class="about">
+	<span>页面特点：该网页是建党99周年主题展示，主要运用了Bootstrap框架、栅格、CSS3里的动画、旋转、边框、渐变等多种效果；页面首页以关于党员的故事、视频报道、滚动信息、联系为导航，展示了中国共产党成立99周年的知识。</span><br><br><br>
+	<span>课程心得:本学期学习了很多CSS3样式，掌握了相对多的知识，在学习过程中遇到的问题，都能在课堂上得到老师的讲解，慢慢感觉到学习前端是一种乐趣，同时深刻体会到学习这门课程并不是轻而易举的，需要细心严谨的态度，还需要充分发挥我们的想象力，才能达到事半功倍的效果。</span>
+</div>
+</body>
+</html>
